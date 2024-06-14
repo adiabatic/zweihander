@@ -10,6 +10,10 @@ This layout is tuned for people who…
 
 While this layout works fine in Windows, it’s not tuned for it. No sane person who primarily uses Windows would put this many Windows keys on a keyboard layout. That said, Print Screen, Scroll Lock, and Pause are available in their usual order on the Media Layer if you need them.
 
+## use Linux…occasionally…and want to type curly quotes
+
+The Caps Lock key makes an excellent Compose key. I’ve added Caps Lock keys to Symbol-C and Symbol-V. (I’m not yet sure which is better for this.)
+
 ## mouse left-handed while doing other things with the right hand
 
 I tend to have my mouse in my left hand, but I like to use my other hand to make things go faster. I’ve added a bunch of buttons to the Media Layer (hold ;) to speed up browsing in applications like Safari and Finder:
@@ -64,8 +68,6 @@ Have you looked at the Page Up, Page Down, Home, and End keys on the EDSF keys a
 ## write a fair bit of Markdown
 
 If you’re on the second layer (hold/tap one of the four inside middle top keys), the `'` button on the far right is a `\`` key.
-
-If you’re on the second layer, pressing `v` will send the string `"\n- "`, not including the quotation marks. This is intended to be a faster way to make a new list item when writing meeting notes in Markdown.
 
 ## use Siri
 
