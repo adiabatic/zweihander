@@ -1,25 +1,38 @@
-# The Zweihander Layout
+# The Zweihänder Layout
 
 NB: the backtick (\`) is special in Markdown. If I write ⌘\` in this readme, I mean “Command-backtick”, not “Command-backslash-backtick”.
 
-This README refers to two secondary layers: the Media Layer and the Symbol Layer. The Media Layer is accessed by holding ; (the semicolon) and has cursor-movement, window-management, and volume-adjustment keys on it. The Symbol Layer is accessed by holding either of the two tall keys between T and Y, or by tapping one of the small keys between 5 and 6. It has a 10-key keypad, parentheses and similar grouping punctuation, and F1–F12.
+This README refers to two secondary layers:
+
+- the Media Layer (hold `;`)
+- the Symbol Layer (hold the tall keys between T and Y or tap the normal keys between 5 and 6)
+
+The Media Layer has cursor-movement, window-management, and volume-adjustment keys on it.
+
+The Symbol Layer has a 10-key keypad on the right side, parentheses and similar grouping punctuation on the left side, and F1–F12 across the top.
 
 This layout is tuned for people who…
 
 ## use macOS
 
-While this layout works fine in Windows, it’s not tuned for it. No sane person who primarily uses Windows would put this many Windows keys on a keyboard layout. That said, Print Screen, Scroll Lock, and Pause are available in their usual order on the Media Layer if you need them.
+No sane person who primarily uses a Control-key-dominant system like Windows or your favorite UNIX windowing environment would put this many Windows keys on a keyboard layout.
 
-## use Linux…occasionally…and want to type curly quotes
+That said, Print Screen, Scroll Lock, and Pause are available in their usual order on the Media Layer if you need them.
 
-The Caps Lock key makes an excellent Compose key. I’ve added Caps Lock keys to Symbol-C and Symbol-V. (I’m not yet sure which is better for this.)
+## use the Compose key when not on macOS
+
+While Caps Lock makes an excellent fn/🌐︎ key on macOS, it also makes an excellent Compose (⎄) key elsewhere. I’ve bound Caps Lock to Symbol-C for sequences like `⎄<"` (`“`) and `⎄>'` (`’`). There’s also a `-` right next door on Symbol-V for `⎄---` (`—`, an em dash).
+
+Why Symbol-C? Because typing `csg` to get an apostrophe is more pleasant than typing `vsg` as each finger is responsible for only one letter each and the index finger doesn't have to scramble from `v` to `g`. I’d like to thank Suraj N. Kurapati for nudging me into thinking about how it should be pleasant to type [common sequences of punctuation][bigrams].
+
+[bigrams]: https://sunaku.github.io/moergo-glove80-keyboard.html#inward-rolling-bigrams
 
 ## mouse left-handed while doing other things with the right hand
 
 I tend to have my mouse in my left hand, but I like to use my other hand to make things go faster. I’ve added a bunch of buttons to the Media Layer (hold ;) to speed up browsing in applications like Safari and Finder:
 
-- ⌘[ — Back
-- ⌘] — Forward
+- ⌘\[ — Back
+- ⌘\] — Forward
 - ⌥⌘↓ — Open Selection and Close Parent Folder
 - ⌥⌘↑ — Go Up and Close Just-Left Folder
 
@@ -63,7 +76,7 @@ All the common spreadsheet operations (+-*/=) are on the right side of the Symbo
 
 ## know the ↑↓←→ fn-key shortcuts for MacBooks
 
-Have you looked at the Page Up, Page Down, Home, and End keys on the EDSF keys and wondered why they’re arranged that way? They’re arranged the same way as the fn-key shortcuts on an Apple laptop’s arrow keys. On Apple keyboards with an\* fn key, if you press fn-↑, you’ll get Page Up; if you press fn-← you’ll get Home. Similarly, on Zweihander, ;-E is Page Up and ;-S is Home.
+Have you looked at the Page Up, Page Down, Home, and End keys on the EDSF keys and wondered why they’re arranged that way? They’re arranged the same way as the fn-key shortcuts on an Apple laptop’s arrow keys. On Apple keyboards with an\* fn key, if you press fn-↑, you’ll get Page Up; if you press fn-← you’ll get Home. Similarly, on Zweihänder, ;-E is Page Up and ;-S is Home.
 
 ## write a fair bit of Markdown
 
