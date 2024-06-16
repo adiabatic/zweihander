@@ -93,7 +93,7 @@ All the common spreadsheet operations (+-*/=) are on the right side of the Symbo
 
 ## write a fair bit of Markdown
 
-Symbol-' functions as a `\`` key.
+Symbol-' functions as a \` (backtick) key.
 
 ## use Emacs-style shortcuts
 
