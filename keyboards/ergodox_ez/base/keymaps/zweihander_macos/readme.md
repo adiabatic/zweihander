@@ -1,4 +1,4 @@
-# The Zweihänder Layout
+# The Zweihänder layout
 
 NB: the backtick (\`) is special in Markdown. If I write ⌘\` in this readme, I mean “Command-backtick”, not “Command-backslash-backtick”.
 
