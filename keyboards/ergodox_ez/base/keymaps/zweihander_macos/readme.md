@@ -89,7 +89,7 @@ Have you looked at the Page Up, Page Down, Home, and End bindings for the ESDF k
 
 ## use spreadsheets
 
-All the common spreadsheet operations (+-*/=) are on the right side of the Symbol Layer. Make-numbers-bigger operations (+, \*) are on the right; make-numbers-smaller operations (-, /) are on the left. There’s also a colon there for entering times and maybe IPv6 addresses.
+In addition to a 10-key numpad, all the common spreadsheet operations (+-*/=) are on the right side of the Symbol Layer. Make-numbers-bigger operations (+, \*) are on the right; make-numbers-smaller operations (-, /) are on the left. There’s also a colon there for entering times and maybe IPv6 addresses.
 
 ## write a fair bit of Markdown
 
