@@ -120,7 +120,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |        |  ⌃⇧← | Home | PgDn |  End |  ⌃⇧→ |------|           |------|  ⌘[  |   ←  |   ↓  |   →  |      |   F16  |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |        |      |      |      |      |      |      |           |      |      |  ⏯  |  ⏮  |   ⏭ |      |        |
+ * |        |      |      |      |      |      |      |           |      |  ⌘Z  |  ⏯  |  ⏮  |   ⏭ |      |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |      |      |      |      |      |                                       |VolDn |VolUp | Mute |      |      |
  *   `----------------------------------'                                       `----------------------------------'
@@ -146,7 +146,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_TRNS,     LGUI(KC_W),       LGUI(LSFT(KC_GRV)), LGUI(KC_GRV),     KC_TRNS,                KC_EJCT,          KC_PWR,
        KC_TRNS,     LGUI(KC_RBRC),    LGUI(LALT(KC_UP)),  KC_UP  ,          LGUI(LALT(KC_DOWN)),    KC_TRNS,          KC_TRNS,
                     LGUI(KC_LBRC),    KC_LEFT,            KC_DOWN,          KC_RGHT,                KC_TRNS,          KC_F16 ,
-       KC_TRNS,     KC_TRNS,          KC_MPLY,            KC_MPRV,          KC_MNXT,                KC_TRNS,          KC_TRNS,
+       KC_TRNS,     LGUI(KC_Z),       KC_MPLY,            KC_MPRV,          KC_MNXT,                KC_TRNS,          KC_TRNS,
                                       KC_VOLD,            KC_VOLU,          KC_MUTE,                KC_TRNS,          KC_TRNS,
        KC_TRNS,     KC_TRNS,
        KC_TRNS,

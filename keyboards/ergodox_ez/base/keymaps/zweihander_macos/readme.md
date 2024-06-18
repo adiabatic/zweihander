@@ -38,6 +38,7 @@ A thumb key is bound to Caps Lock so you can use keyboard shortcuts like 🌐︎
 
 I tend to have my mouse in my left hand, but I like to use my other hand to make things go faster. I’ve added a bunch of buttons to the Media Layer (hold `;`) to speed up browsing in applications like Safari and Finder:
 
+- ⌘Z — Undo
 - ⌘\[ — Back
 - ⌘\] — Forward
 - ⌥⌘↓ — Open Selection and Close Parent Folder
