@@ -36,26 +36,36 @@ A thumb key is bound to Caps Lock so you can use keyboard shortcuts like 🌐︎
 
 ## mouse left-handed while doing other things with the right hand
 
-I tend to have my mouse in my left hand, but I like to use my other hand to make things go faster. I’ve added a bunch of buttons to the Media Layer (hold `;`) to speed up browsing in applications like Safari and Finder:
+I tend to have my mouse in my left hand, but I still like to perform common tasks without taking my left hand off the mouse.
 
-- ⌘S — Save
-- ⌘Z — Undo
+Cut, Copy, and Paste (⌘X, ⌘C, and ⌘V) are available on the three bottommost right-thumb buttons if you hold `;`.
+
+I’ve also added a bunch of buttons to the Media Layer (hold `;`) to speed up browsing in applications like Safari and Finder:
+
 - ⌘\[ — Back
 - ⌘\] — Forward
 - ⌥⌘↓ — Open Selection and Close Parent Folder
 - ⌥⌘↑ — Go Up and Close Just-Left Folder
 
-I also have a few keys dedicated to window management that I almost never use:
+It’s also nice to be able to save files after pasting into them, so:
 
-- ⌘W — Close Window
+- ⌘S — Save
+
+It’s also very nice to be able to undo things with just your right hand, especially if you’ve plugged the keyboard into an iPad and you’ve got an Apple Pencil in your left hand:
+
+- ⌘Z — Undo
+
+Finally, I also have a few keys dedicated to window management that I almost never use:
+
+- ⌘W — Close Window (or maybe tab)
 - ⌘\` — Move Focus to Next Window
 - ⌘⇧\` — Move Focus to Previous Window
 
-Cut, Copy, and Paste (⌘X, ⌘C, and ⌘V) are also available on the three bottommost right-thumb buttons if you hold ;.
-
 ## think left is up and right is down…except when it comes to volume
 
-I never got into `vi`-style hjkl, so I think of leftwards being upwards and rightwards being downwards.
+I never got into [vi][]-style `hjkl`, so I think of leftwards being upwards and rightwards being downwards.
+
+[vi]: https://en.wikipedia.org/wiki/Vi_(text_editor)
 
 However, when I’m adjusting the volume, I want the “quieter” key on the left and the “louder” key on the right since all the volume bars I adjust on macOS, iPadOS, and GNOME 3 are oriented that way.
 
