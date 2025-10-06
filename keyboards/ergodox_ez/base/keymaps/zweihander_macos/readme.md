@@ -107,6 +107,8 @@ While Caps Lock makes an excellent fn/🌐︎ key on macOS, it also makes an exc
 
 Why Symbol-C? Because typing `csg` to get an apostrophe is more pleasant than typing `vsg` as each finger is responsible for only one letter each and the index finger doesn't have to scramble from `v` to `g`. I’d like to thank Suraj N. Kurapati for nudging me into thinking about how it should be pleasant to type [common sequences of punctuation][bigrams].
 
+**~~Pro~~ Rank amateur tip**: All the Compose-key sequences for curly quotes support flipping the order of the directional less/greater-than sign and the actual quote mark. If you’re having trouble remembering whether to use your left pinky or ring finger for an opening double quote, try typing `⎄<"` instead of `⎄"<` or vice versa. Oddly enough, I’ve settled into `⎄'>` for apostrophes but by switching to `⎄<"` for quotation marks I get the quotes curled the way I want more frequently and with less pondering.
+
 [bigrams]: https://sunaku.github.io/moergo-glove80-keyboard.html#inward-rolling-bigrams
 
 \* I pronounce “fn” as “effin’”. Your mileage may vary.
