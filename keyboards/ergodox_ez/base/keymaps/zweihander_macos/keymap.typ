@@ -2,7 +2,7 @@
 // Compile: typst compile keymap.typ
 
 #set page(width: 11in, height: 8.5in, margin: 0.4in)
-#set text(font: ("Lucida Grande", "Apple Symbols"), size: 7pt)
+#set text(font: ((name: "STIX Two Math", covers: regex("[⏭⏮⏯⏸⎊⎙]")), "Lucida Grande", "Apple Symbols"), size: 7pt)
 
 #let u = 13mm
 #let kh = 6.5mm
@@ -34,7 +34,7 @@
 
       if sub != none {
         align(center + horizon, text(size: final-size, weight: wt, fill: fg, body))
-        place(bottom + center, dy: -1pt, text(size: sub-size, fill: luma(50%), sub))
+        place(bottom + right, dy: -1pt, dx: -1pt, text(size: sub-size, fill: luma(50%), sub))
       } else {
         align(center + horizon, text(size: final-size, weight: wt, fill: fg, body))
       }
@@ -127,21 +127,21 @@
   (K("="), K("1"), K("2"), K("3"), K("4"), K("5")),
   (K("⌦"), K("Q"), K("W"), K("E"), K("R"), K("T")),
   (K("⌫"), K("A"), K("S"), K("D"), K("F"), K("G")),
-  (M("L⇧"), K("Z"), K("X"), K("C"), K("V"), K("B")),
-  (M("L⌃"), M("L⌥"), M("L⌘"), K("←"), K("→")),
+  (K("L⇧"), K("Z"), K("X"), K("C"), K("V"), K("B")),
+  (K("L⌃"), K("L⌥"), K("L⌘"), K("←"), K("→")),
 )
-#let bli = (Ly("L1"), Ly2("~L1"), M("L⌘"))
-#let blt = (K("`~"), M("⇪"), K2("↩\u{FE0E}"), K2("⇥"), M("L⌥"), M("L⌃"))
+#let bli = (K("L1"), K2("~L1"), K("L⌘"))
+#let blt = (K("`~"), K("⇪"), K2("↩\u{FE0E}"), K2("⇥"), K("L⌥"), K("L⌃"))
 
 #let br = (
   (K("6"), K("7"), K("8"), K("9"), K("0"), K("-")),
   (K("Y"), K("U"), K("I"), K("O"), K("P"), K("\\")),
-  (K("H"), K("J"), K("K"), K("L"), D(";", "L2"), D("'", "R⌘")),
-  (K("N"), K("M"), K(","), K("."), D("/", "R⌥"), M("R⇧")),
+  (K("H"), K("J"), K("K"), K("L"), key(";", sub: "L2"), key("'", sub: "R⌘")),
+  (K("N"), K("M"), K(","), K("."), key("/", sub: "R⌥"), K("R⇧")),
   (K("↑"), K("↓"), K("["), K("]"), K("↩\u{FE0E}")),
 )
-#let bri = (Ly("L1"), Ly2("~L1"), M("R⌘"))
-#let brt = (K("⎋"), K("⌫"), K2("⇥"), K2("␣"), M("R⌥"), M("R⌃"))
+#let bri = (K("L1"), K2("~L1"), K("R⌘"))
+#let brt = (K("⎋"), K("⌫"), K2("⇥"), K2("␣"), K("R⌥"), K("R⌃"))
 
 // ── SYMB ────────────────────────────────────────────────────────────────────
 
@@ -168,7 +168,7 @@
 // ── MDIA ────────────────────────────────────────────────────────────────────
 
 #let ml = (
-  (X("="), K("F14"), K("F15"), K(text(font: "Apple Symbols", "⎙")), K("ScrLk"), K("⏸\u{FE0E}⎊")),
+  (X("="), K("F14"), K("F15"), K("⎙"), K("ScrLk"), K("⏸\u{FE0E}⎊")),
   (X("⌦"), X("Q"), K("⌥↑"), K("⇞"), K("⌥↓"), X("T")),
   (X("⌫"), K("⌃⇧←"), K("↖"), K("⇟"), K("↘"), K("⌃⇧→")),
   (X("L⇧"), X("Z"), X("X"), X("C"), X("V"), X("B")),
