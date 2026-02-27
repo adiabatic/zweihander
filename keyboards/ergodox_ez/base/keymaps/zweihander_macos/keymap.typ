@@ -2,7 +2,7 @@
 // Compile: typst compile keymap.typ
 
 #set page(width: 11in, height: 8.5in, margin: 0.4in)
-#set text(font: "Helvetica Neue", size: 7pt)
+#set text(font: ("Lucida Grande", "Apple Symbols"), size: 7pt)
 
 #let u = 13mm
 #let kh = 6.5mm
@@ -12,17 +12,32 @@
 // ── Key rendering ───────────────────────────────────────────────────────────
 
 #let key(body, w: 1, h: 1, bg: white, fg: black, bld: false, sub: none) = {
+  let padding = 1pt
+  let ref-size = 10pt
+  let max-size = 12pt
+  let sub-size = 4pt
+  let sub-reserve = 5pt
+
   rect(
     width: u * w, height: kh * h,
-    radius: 1.5pt, stroke: 0.4pt + luma(60%), fill: bg, inset: 1pt,
-    if sub != none {
-      align(center + horizon,
-        text(size: 5.5pt, weight: if bld { "bold" } else { "regular" }, fill: fg, body))
-      place(bottom + center, dy: -1pt,
-        text(size: 4pt, fill: luma(50%), sub))
-    } else {
-      align(center + horizon,
-        text(size: 5.5pt, weight: if bld { "bold" } else { "regular" }, fill: fg, body))
+    radius: 1.5pt, stroke: 0.4pt + luma(60%), fill: bg, inset: padding,
+    context {
+      let avail-w = u * w - 2 * padding
+      let avail-h = kh * h - 2 * padding
+      if sub != none { avail-h = avail-h - sub-reserve }
+      let m = measure(text(size: ref-size, body))
+      let scale-w = avail-w / m.width
+      let scale-h = avail-h / m.height
+      let scale = calc.min(scale-w, scale-h)
+      let final-size = calc.min(scale * ref-size, max-size)
+      let wt = if bld { "bold" } else { "regular" }
+
+      if sub != none {
+        align(center + horizon, text(size: final-size, weight: wt, fill: fg, body))
+        place(bottom + center, dy: -1pt, text(size: sub-size, fill: luma(50%), sub))
+      } else {
+        align(center + horizon, text(size: final-size, weight: wt, fill: fg, body))
+      }
     },
   )
 }
@@ -153,9 +168,9 @@
 // ── MDIA ────────────────────────────────────────────────────────────────────
 
 #let ml = (
-  (X("="), K("F14"), K("F15"), K("PrtSc"), K("ScrLk"), K("Pause")),
-  (X("⌦"), X("Q"), K("⌥↑"), K("PgUp"), K("⌥↓"), X("T")),
-  (X("⌫"), K("⌃⇧←"), K("Home"), K("PgDn"), K("End"), K("⌃⇧→")),
+  (X("="), K("F14"), K("F15"), K(text(font: "Apple Symbols", "⎙")), K("ScrLk"), K("⏸\u{FE0E}⎊")),
+  (X("⌦"), X("Q"), K("⌥↑"), K("⇞"), K("⌥↓"), X("T")),
+  (X("⌫"), K("⌃⇧←"), K("↖"), K("⇟"), K("↘"), K("⌃⇧→")),
   (X("L⇧"), X("Z"), X("X"), X("C"), X("V"), X("B")),
   (X("L⌃"), X("L⌥"), X("L⌘"), X("←"), X("→")),
 )
@@ -166,7 +181,7 @@
   (K("⌘W"), K("⌘⇧`"), K("⌘S"), K("⌘`"), K(text(font: "Apple Symbols", "⏏\u{FE0E}")), K("⏻\u{FE0E}")),
   (K("⌘]"), K("⌥⌘↑"), K("↑"), K("⌥⌘↓"), X("P"), X("\\")),
   (K("⌘["), K("←"), K("↓"), K("→"), X(";"), K("F16")),
-  (K("⌘Z"), K("⏯"), K("⏮"), K("⏭"), X("/"), X("R⇧")),
+  (K("⌘Z"), K("⏯\u{FE0E}"), K("⏮\u{FE0E}"), K("⏭\u{FE0E}"), X("/"), X("R⇧")),
   (K("🔉"), K("🔊"), K("🔇"), X("]"), X("↩\u{FE0E}")),
 )
 #let mri = (X("L1"), X2("~L1"), X("R⌘"))
