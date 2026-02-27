@@ -189,8 +189,8 @@
 
 // ── Render ──────────────────────────────────────────────────────────────────
 
-#draw-layer("BASE", bl, bli, blt, br, bri, brt)
+#draw-layer("MDIA — Media + Navigation", ml, mli, mlt, mr, mri, mrt)
 #v(4pt)
 #draw-layer("SYMB — Symbols + Numpad", sl, sli, slt, sr, sri, srt)
 #v(4pt)
-#draw-layer("MDIA — Media + Navigation", ml, mli, mlt, mr, mri, mrt)
+#draw-layer("BASE", bl, bli, blt, br, bri, brt)
