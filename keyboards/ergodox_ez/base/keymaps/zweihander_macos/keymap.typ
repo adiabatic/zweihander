@@ -15,16 +15,15 @@
   rect(
     width: u * w, height: kh * h,
     radius: 1.5pt, stroke: 0.4pt + luma(60%), fill: bg, inset: 1pt,
-    align(center + horizon,
-      if sub != none {
-        stack(dir: ttb, spacing: 0.5pt,
-          text(size: 5.5pt, weight: if bld { "bold" } else { "regular" }, fill: fg, body),
-          text(size: 4pt, fill: luma(50%), sub),
-        )
-      } else {
-        text(size: 5.5pt, weight: if bld { "bold" } else { "regular" }, fill: fg, body)
-      }
-    ),
+    if sub != none {
+      align(center + horizon,
+        text(size: 5.5pt, weight: if bld { "bold" } else { "regular" }, fill: fg, body))
+      place(bottom + center, dy: -1pt,
+        text(size: 4pt, fill: luma(50%), sub))
+    } else {
+      align(center + horizon,
+        text(size: 5.5pt, weight: if bld { "bold" } else { "regular" }, fill: fg, body))
+    },
   )
 }
 
@@ -32,16 +31,16 @@
 
 #let mbg = luma(90%)
 #let lbg = luma(75%)
-#let xbg = luma(96%)
-#let xfg = luma(70%)
+#let xbg = luma(97%)
+#let xfg = luma(85%)
 
 #let K(l) = key(l)
-#let M(l) = key(l, bg: mbg, bld: true)
-#let Ly(l) = key(l, bg: lbg, bld: true)
-#let D(tap, hold) = key(tap, bg: mbg, bld: true, sub: hold)
+#let M(l) = key(l, bg: mbg)
+#let Ly(l) = key(l, bg: lbg)
+#let D(tap, hold) = key(tap, bg: mbg, sub: hold)
 #let X(l) = key(l, bg: xbg, fg: xfg)
 
-#let Ly2(l) = key(l, h: 2, bg: lbg, bld: true)
+#let Ly2(l) = key(l, h: 2, bg: lbg)
 #let K2(l) = key(l, h: 2)
 #let X2(l) = key(l, h: 2, bg: xbg, fg: xfg)
 
@@ -117,14 +116,14 @@
   (M("L⌃"), M("L⌥"), M("L⌘"), K("←"), K("→")),
 )
 #let bli = (Ly("L1"), Ly2("~L1"), M("L⌘"))
-#let blt = (K("`~"), M("⇪"), K2("↩︎"), K2("⇥"), M("L⌥"), M("L⌃"))
+#let blt = (K("`~"), M("⇪"), K2("↩\u{FE0E}"), K2("⇥"), M("L⌥"), M("L⌃"))
 
 #let br = (
   (K("6"), K("7"), K("8"), K("9"), K("0"), K("-")),
   (K("Y"), K("U"), K("I"), K("O"), K("P"), K("\\")),
   (K("H"), K("J"), K("K"), K("L"), D(";", "L2"), D("'", "R⌘")),
   (K("N"), K("M"), K(","), K("."), D("/", "R⌥"), M("R⇧")),
-  (K("↑"), K("↓"), K("["), K("]"), K("↩︎")),
+  (K("↑"), K("↓"), K("["), K("]"), K("↩\u{FE0E}")),
 )
 #let bri = (Ly("L1"), Ly2("~L1"), M("R⌘"))
 #let brt = (K("⎋"), K("⌫"), K2("⇥"), K2("␣"), M("R⌥"), M("R⌃"))
@@ -139,14 +138,14 @@
   (X("L⌃"), X("L⌥"), X("L⌘"), X("←"), X("→")),
 )
 #let sli = (X("L1"), X2("~L1"), X("L⌘"))
-#let slt = (X("`~"), X("⇪"), X2("↩︎"), X2("⇥"), X("L⌥"), X("L⌃"))
+#let slt = (X("`~"), X("⇪"), X2("↩\u{FE0E}"), X2("⇥"), X("L⌥"), X("L⌃"))
 
 #let sr = (
   (K("F6"), K("F7"), K("F8"), K("F9"), K("F10"), K("F11")),
   (K("/"), K("7"), K("8"), K("9"), K("*"), K("F12")),
   (K("-"), K("4"), K("5"), K("6"), K("+"), K("`~")),
   (K(":"), K("1"), K("2"), K("3"), K("="), X("R⇧")),
-  (K("0"), K("."), K("←"), K("→"), X("↩︎")),
+  (K("0"), K("."), K("←"), K("→"), X("↩\u{FE0E}")),
 )
 #let sri = (X("L1"), X2("~L1"), X("R⌘"))
 #let srt = (X("⎋"), X("⌫"), X2("⇥"), X2("␣"), X("R⌥"), X("R⌃"))
@@ -161,14 +160,14 @@
   (X("L⌃"), X("L⌥"), X("L⌘"), X("←"), X("→")),
 )
 #let mli = (X("L1"), X2("~L1"), X("L⌘"))
-#let mlt = (X("`~"), X("⇪"), X2("↩︎"), X2("⇥"), X("L⌥"), X("L⌃"))
+#let mlt = (X("`~"), X("⇪"), X2("↩\u{FE0E}"), X2("⇥"), X("L⌥"), X("L⌃"))
 
 #let mr = (
-  (K("⌘W"), K("⌘⇧`"), K("⌘S"), K("⌘`"), K("Eject"), K("Power")),
+  (K("⌘W"), K("⌘⇧`"), K("⌘S"), K("⌘`"), K(text(font: "Apple Symbols", "⏏\u{FE0E}")), K("⏻\u{FE0E}")),
   (K("⌘]"), K("⌥⌘↑"), K("↑"), K("⌥⌘↓"), X("P"), X("\\")),
   (K("⌘["), K("←"), K("↓"), K("→"), X(";"), K("F16")),
-  (K("⌘Z"), K("Play"), K("Prev"), K("Next"), X("/"), X("R⇧")),
-  (K("Vol-"), K("Vol+"), K("Mute"), X("]"), X("↩︎")),
+  (K("⌘Z"), K("⏯"), K("⏮"), K("⏭"), X("/"), X("R⇧")),
+  (K("🔉"), K("🔊"), K("🔇"), X("]"), X("↩\u{FE0E}")),
 )
 #let mri = (X("L1"), X2("~L1"), X("R⌘"))
 #let mrt = (X("⎋"), X("⌫"), K2("⌘C"), K2("⌘V"), X("R⌥"), K("⌘X"))
