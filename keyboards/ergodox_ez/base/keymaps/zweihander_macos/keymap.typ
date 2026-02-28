@@ -1,6 +1,3 @@
-// ErgoDox EZ — Zweihander (macOS) cheat sheet
-// Compile: typst compile keymap.typ
-
 #set page(width: 11in, height: 8.5in, margin: 0.4in)
 #set text(font: ((name: "STIX Two Math", covers: regex("[⏭⏮⏯⏸⎊⎙]")), "Lucida Grande", "Apple Symbols"), size: 7pt)
 
@@ -118,8 +115,8 @@
     draw-half(r-rows, r-inner, r-thumb, true),
     box(height: half-h, align(top,
       rotate(90deg, reflow: true,
-        block(fill: luma(30%), radius: 1.5pt, inset: (x: 3pt, y: 2pt),
-          text(size: 11pt, weight: "bold", fill: white, title))))),
+        block(fill: black, radius: 1.5pt, inset: (x: 3pt, y: 2pt),
+          text(size: 11pt, weight: "bold", fill: white, top-edge: "ascender", bottom-edge: "descender", title))))),
   ))
 }
 
@@ -191,8 +188,8 @@
 
 // ── Render ──────────────────────────────────────────────────────────────────
 
-#draw-layer("MDIA — Media + Navigation", ml, mli, mlt, mr, mri, mrt)
+#draw-layer("Media & Navigation", ml, mli, mlt, mr, mri, mrt)
 #v(2pt)
-#draw-layer("SYMB — Symbols + Numpad", sl, sli, slt, sr, sri, srt)
+#draw-layer("Symbols & Numpad", sl, sli, slt, sr, sri, srt)
 #v(2pt)
-#draw-layer("BASE", bl, bli, blt, br, bri, brt)
+#draw-layer("Base", bl, bli, blt, br, bri, brt)
