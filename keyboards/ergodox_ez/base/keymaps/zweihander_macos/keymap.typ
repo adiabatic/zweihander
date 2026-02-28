@@ -1,3 +1,4 @@
+#set document(date: none)
 #set page(width: 11in, height: 8.5in, margin: 0.4in)
 #set text(font: ((name: "STIX Two Math", covers: regex("[⏭⏮⏯⏸⎊⎙]")), "Lucida Grande", "Apple Symbols"), size: 7pt)
 
