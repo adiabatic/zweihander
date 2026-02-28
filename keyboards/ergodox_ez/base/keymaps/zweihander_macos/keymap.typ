@@ -114,12 +114,12 @@
 #let draw-layer(title, l-rows, l-inner, l-thumb, r-rows, r-inner, r-thumb) = {
   let half-h = 5 * kh + thumb-gap + 3 * kh
   align(center, stack(dir: ltr, spacing: gap,
+    draw-half(l-rows, l-inner, l-thumb, false),
+    draw-half(r-rows, r-inner, r-thumb, true),
     box(height: half-h, align(top,
       rotate(90deg, reflow: true,
         block(fill: luma(30%), radius: 1.5pt, inset: (x: 3pt, y: 2pt),
-          text(size: 9pt, weight: "bold", fill: white, title))))),
-    draw-half(l-rows, l-inner, l-thumb, false),
-    draw-half(r-rows, r-inner, r-thumb, true),
+          text(size: 11pt, weight: "bold", fill: white, title))))),
   ))
 }
 
