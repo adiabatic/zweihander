@@ -116,7 +116,7 @@
   align(center, stack(dir: ltr, spacing: gap,
     box(height: half-h, align(top,
       rotate(90deg, reflow: true,
-        block(fill: luma(30%), radius: 2pt, inset: (x: 3pt, y: 2pt),
+        block(fill: luma(30%), radius: 1.5pt, inset: (x: 3pt, y: 2pt),
           text(size: 9pt, weight: "bold", fill: white, title))))),
     draw-half(l-rows, l-inner, l-thumb, false),
     draw-half(r-rows, r-inner, r-thumb, true),
