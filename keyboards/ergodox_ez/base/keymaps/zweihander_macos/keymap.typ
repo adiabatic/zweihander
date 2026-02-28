@@ -112,10 +112,12 @@
 }
 
 #let draw-layer(title, l-rows, l-inner, l-thumb, r-rows, r-inner, r-thumb) = {
-  block(width: 100%, inset: (x: 4pt, y: 2pt), fill: luma(30%), radius: 2pt,
-    text(size: 9pt, weight: "bold", fill: white, title))
-  v(2pt)
+  let half-h = 5 * kh + thumb-gap + 3 * kh
   align(center, stack(dir: ltr, spacing: gap,
+    box(height: half-h, align(top,
+      rotate(90deg, reflow: true,
+        block(fill: luma(30%), radius: 2pt, inset: (x: 3pt, y: 2pt),
+          text(size: 9pt, weight: "bold", fill: white, title))))),
     draw-half(l-rows, l-inner, l-thumb, false),
     draw-half(r-rows, r-inner, r-thumb, true),
   ))
