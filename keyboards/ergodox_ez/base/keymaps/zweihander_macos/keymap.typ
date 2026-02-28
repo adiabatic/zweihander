@@ -4,17 +4,17 @@
 #set page(width: 11in, height: 8.5in, margin: 0.4in)
 #set text(font: ((name: "STIX Two Math", covers: regex("[⏭⏮⏯⏸⎊⎙]")), "Lucida Grande", "Apple Symbols"), size: 7pt)
 
-#let u = 13mm
-#let kh = 6.5mm
+#let u = 15.5mm
+#let kh = 7.75mm
 #let gap = 6mm
-#let thumb-gap = 3pt
+#let thumb-gap = 2pt
 
 // ── Key rendering ───────────────────────────────────────────────────────────
 
 #let key(body, w: 1, h: 1, bg: white, fg: black, bld: false, sub: none) = {
   let padding = 1pt
   let ref-size = 10pt
-  let max-size = 12pt
+  let max-size = 14pt
   let sub-size = 4pt
   let sub-reserve = 5pt
 
@@ -192,7 +192,7 @@
 // ── Render ──────────────────────────────────────────────────────────────────
 
 #draw-layer("MDIA — Media + Navigation", ml, mli, mlt, mr, mri, mrt)
-#v(4pt)
+#v(2pt)
 #draw-layer("SYMB — Symbols + Numpad", sl, sli, slt, sr, sri, srt)
-#v(4pt)
+#v(2pt)
 #draw-layer("BASE", bl, bli, blt, br, bri, brt)
